@@ -141,5 +141,55 @@ export let stock = [
             ]
         },
 
+        {id: '16',
+        name: 'BAPE CHECK JERSEY TOP',
+        price: '$100',
+        description: 'Checkered jacket',
+        colors:[
+            { color:'Brown', colorid:'#BFA8A0' , pictures: ['./Assets/16brown1.png', './Assets/16brown2.png']},
+            { color:'Blue', colorid:'#6D778A' ,pictures: ['./Assets/16blue1.png', './Assets/16blue2.png']}
+            ]
+        },
+
+        {id: '17',
+        name: 'BAPE CHECK JERSEY PANTS',
+        price: '$60',
+        description: 'Chekered pants',
+        colors:[
+            { color:'Brown', colorid:'#BFA8A0' , pictures: ['./Assets/17brown1.png', './Assets/17brown2.png']},
+            { color:'Blue', colorid:'#6D778A' ,pictures: ['./Assets/17blue1.png', './Assets/17blue2.png']}
+            ]
+        },
+
+        {id: '18',
+        name: 'BUSY SHARK SWEAT PANTS',
+        price: '$60',
+        description: 'Sweatpants',
+        colors:[
+            { color:'Black', colorid:'#111113' , pictures: ['./Assets/18black1.png', './Assets/18black2.png']},
+            { color:'Gray', colorid:'#AAAAAE' ,pictures: ['./Assets/18gray1.png', './Assets/18gray2.png']}
+            ]
+        },
+
+        {id: '19',
+        name: 'COLOR CAMO SWEAT SHORTS',
+        price: '$40',
+        description: 'Printed cammo sweat shorts',
+        colors:[
+            { color:'Blue', colorid:'#1D264A' , pictures: ['./Assets/19blue1.png', './Assets/19blue2.png']},
+            { color:'Red', colorid:'#AA1912' ,pictures: ['./Assets/19red.png', './Assets/19red2.png']}
+            ]
+        },
+
+        {id: '20',
+        name: 'BAPE LOGO CHECK SHORTS',
+        price: '$40',
+        description: 'Checkered shorts',
+        colors:[
+            { color:'Blue', colorid:'#4874BD' , pictures: ['./Assets/20blue1.png', './Assets/20blue2.png']},
+            { color:'Red', colorid:'#F05033' ,pictures: ['./Assets/20red1.png', './Assets/20red2.png']}
+            ]
+        },
+
 
 ]
