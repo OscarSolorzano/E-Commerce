@@ -132,7 +132,7 @@ export let stock = [
             ]
         },
         {id: '15',
-        name: 'MULTI POCKET SHARK HOODIE JACKET',
+        name: 'POCKET SHARK HOODIE JACKET',
         price: '$100',
         description: 'Printed Logo jacket',
         colors:[

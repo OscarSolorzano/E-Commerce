@@ -12,7 +12,31 @@ p{
     width: 20%;
 }
 
+.card{
+    border: 0;
+}
+
+.card-body{
+    background-color: #F9FAFC ;
+}
+
 .mx-10vw{
     margin-left: 10vw;
     margin-right: 10vw;
+}
+
+.header{
+    height: 4rem;
+}
+
+.banner{
+    height: 20rem;
+    background-color: black;
+}
+.contained-logo{
+    height: 100%;
+}
+
+.banner-logo{
+    height: 80%;
 }
