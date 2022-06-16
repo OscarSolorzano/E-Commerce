@@ -31,7 +31,8 @@ function generateCard(objectArray) {
                                         <div class="color-circle mx-1 mb-1" style="background:${objectArray[i].colors[0].colorid}"></div>
                                         <div class="color-circle mx-1 mb-1" style="background:${objectArray[i].colors[1].colorid}"></div>
                                 </div>
-                                    <p class="text-end">${objectArray[i].price}</p>
+                                    <p class="text-end">$ ${objectArray[i].price}</p>
+                                    <button onclick=addItems(${objectArray[i].id})>Add to cart</button>
                                 </div>
                             </div>
                         </div>`;
@@ -57,7 +58,7 @@ function generateMoreCards(){
                                     <div class="color-circle mx-1 mb-1" style="background:${objectArray[i].colors[0].colorid}"></div>
                                     <div class="color-circle mx-1 mb-1" style="background:${objectArray[i].colors[1].colorid}"></div>
                             </div>
-                                <p class="text-end">${objectArray[i].price}</p>
+                                <p class="text-end">$ ${objectArray[i].price}</p>
                             </div>
                         </div>
                     </div>`;

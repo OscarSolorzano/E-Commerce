@@ -40,3 +40,39 @@ p{
 .banner-logo{
     height: 80%;
 }
+.btn{
+    border-radius: 0;
+    font-size: larger;
+    padding: 1rem 9rem;
+}
+
+.shop-btn{
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+
+}
+
+#preview-cart-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.shopping-cart{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 1821px;
+    min-height: 1821px;
+    width: 25rem;
+}
+
+.shop-img{
+    width: 50%;
+}
+
+.shop-card{
+    width: 50%;
+}

@@ -1,0 +1,111 @@
+:root{
+    --color-primary: #EB4A5A;
+    --color-secundary: #f9fafc;
+    --color-third: #F6F3F3;
+    --color-fourth: #434343;
+    --color-fifth: #274671;
+}
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+    /* font-size: 62.5%; */
+  }
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+ /* header */
+.container-header{
+    background-color:var(--color-third);
+    display: flex;
+    justify-content:center;
+    padding: 0 4.0rem;
+    margin-bottom: 20px;
+}
+.logo-academlo{
+    height: 50px;
+}
+/* products */
+.container-products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-item{
+    text-align: center;
+    border: 1px solid var(--color-third);
+    margin-bottom: 20px;
+}
+.container-item img{
+    width: 150px;
+}
+.container-item p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+}
+.remove{
+    background-color: var(--color-secundary);
+    color: var(--color-primary);
+    border-radius: 50%;
+    border: 0.5px solid var(--color-primary);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.remove:hover{
+    background-color: var(--color-primary);
+    border: 0.5px solid var(--color-primary);
+    color: var(--color-secundary);
+}
+.remove:active{
+    background-color:#eb4a5a91;
+    border: 1.5px solid var(--color-primary);
+    color: var(--color-secundary);
+}
+.total{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px;
+}
+.total p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    color:var(--color-primary);
+    font-size: x-large;
+}
+.total button{
+    background-color: var(--color-secundary);
+    border-radius: 5px;
+    border: 0.5px solid var(--color-primary);
+    padding: 10px;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+.total button:hover{
+    background-color: var(--color-primary);
+    border: 0.5px solid var(--color-primary);
+    color: var(--color-secundary);
+}
+.total button:active{
+    background-color:#eb4a5a91;
+    border: 1.5px solid var(--color-primary);
+    color: var(--color-secundary);
+}
+/* footer */
+.container-footer{
+    background-color:var(--color-primary);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    padding: 0 4.0rem;
+    color: var(--color-secundary);
+    
+}
+.logo-footer{
+    width: 50px;
+}
