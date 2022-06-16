@@ -7,7 +7,6 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link href="./css/styles.css" rel="stylesheet">
-    <link href="./css/details.css" rel="stylesheet">
     <link href="./css/cart.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d9a493c410.js" crossorigin="anonymous"></script>
 </head>
@@ -21,25 +20,20 @@
         <img class="banner-logo" src="./Assets/BAPE-Logo.png">
     </div>
 
-    <div class="row mt-5 mx-10vw justify-content-evenly" id="product-container">
-    </div>
+    <div id="home">
+        <div class="row mt-5 mx-10vw justify-content-evenly" id="product-container">
+        </div>
 
-    <div id="button-container" class="d-flex justify-content-center align-items-center my-5">
-        <button class="btn btn-outline-secondary" onClick=generateMoreCards()>Show more</button>
+        <div id="button-container" class="d-flex justify-content-center align-items-center my-5">
+            <button class="btn btn-outline-secondary" onClick=generateMoreCards()>Show more</button>
+        </div>
     </div>
-
     <div id="preview-cart-container">
     </div>
-
-    <div id="astrid">
-
-    </div>
-
+ 
     <script src="./java/pageGenerator.js" type="module"></script>
     <script src="./java/shoppingCart.js" type="module"></script>
-    <script src="./java/cart.js" type="module"></script>
     <script src="./java/script.js" type="module"></script>
-    <script src="./java/inicial.js" type="module"></script>
 
 </body>
 </html>

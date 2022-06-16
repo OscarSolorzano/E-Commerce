@@ -7,13 +7,10 @@ if (shoppingCart){
   shoppingCart = [];
 }
 
-function hola(){
-  console.log("hola");
-}
-console.log(shoppingCart);
 //Genero la lista del carrito en base a un div con la clase container-cart
-function generateCardCart(shoppingCart) {
-  const container = document.getElementById("product-container");
+function generateCardCart() {
+  let shoppingCart = JSON.parse(localStorage.getItem('ShoppingCart')) || [];
+  const container = document.getElementById("home");
   let html = '';
   for (let i = 0; i < shoppingCart.length; i++) {
     html += `<div class="container-item">
@@ -24,10 +21,11 @@ function generateCardCart(shoppingCart) {
                       </div>`;
   }
   html += `<div id="total"></div>`
-  container.innerHTML += html;
+  container.innerHTML = html;
 }
-generateCardCart(shoppingCart);
-  let pagoTotal = 0;
+
+
+let pagoTotal = 0;
 for (let l = 0; l < shoppingCart.length; l++) {
   let pago = shoppingCart[l].price;
   pagoTotal += pago;
@@ -78,9 +76,7 @@ function fin(){
 }
 
 
-// generateCardCart();
-
-
-window.hola = hola;
+window.generateCardCart = generateCardCart;
 window.fin = fin;
 window.removeCart = removeCart;
+
