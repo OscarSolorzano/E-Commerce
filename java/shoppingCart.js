@@ -102,14 +102,13 @@ function generateCardCart() {
   }
   
   
-  let pagoTotal = 0;
-  for (let l = 0; l < ShoppingCartItems.length; l++) {
-    let pago = ShoppingCartItems[l].price;
-    pagoTotal += pago;
-  }
+  
   //Otro div para la seccion de pago donde aparecerá la opcion de finalizar la compra
   function totalPago(){
-    pagoTotal
+    let pagoTotal = 0;
+    for (let i = 0; i < ShoppingCartItems.length; i++) {
+      pagoTotal += ShoppingCartItems[i].price;
+    }
     let containerPago = document.getElementById("total");
     let htmlPago = `<div class="d-flex align-items-center flex-column"> 
                           <h2>$${pagoTotal}</h2>
@@ -145,6 +144,7 @@ function generateCardCart() {
     window.location.reload();
   }
   function fin(){
+    alert("Thanks for your purchase You'll be sent back home");
     localStorage.clear();
     window.location.reload();
   }
