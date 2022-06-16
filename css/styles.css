@@ -1,3 +1,7 @@
+
+*{
+    font-family: Helvetica , sans-serif;
+}
 .color-circle{
     border-radius: 50%;
     width: 1rem;
@@ -46,6 +50,13 @@ p{
     padding: 1rem 9rem;
 }
 
+.btn-go-to{
+    border-radius: 0;
+    font-size: larger;
+    padding: 1rem 6rem;
+}
+
+
 .shop-btn{
     margin-left: auto;
     border: none;
@@ -54,18 +65,18 @@ p{
 }
 
 #preview-cart-container{
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
 }
 
-.shopping-cart{
+.shopping-cart{    
     background-color: white;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    max-height: 1821px;
-    min-height: 1821px;
+    max-height: 100vh;
+    min-height: 100vh;
     width: 25rem;
 }
 

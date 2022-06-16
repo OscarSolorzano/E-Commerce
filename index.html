@@ -11,13 +11,18 @@
     <script src="https://kit.fontawesome.com/d9a493c410.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<div>
     <div class="header d-flex my-3 mx-5">
-        <img class="contained-logo" src="./Assets/Bape Logo.png">
-        <img class="contained-logo" src="./Assets/Bape Lettering.png">
+        <div onClick="reMakeHome()">
+            <img class="contained-logo" src="./Assets/Bape Logo.png">
+            <img class="contained-logo" src="./Assets/Bape Lettering.png">
+        </div>
         <button onClick="generateCart()" class="shop-btn"><i class="fa-solid fa-cart-shopping fa-xl"></i></button>
     </div>
-    <div class="banner d-flex align-items-center justify-content-center">
-        <img class="banner-logo" src="./Assets/BAPE-Logo.png">
+    <div id="banner-container">
+        <div id="banner" class="banner d-flex align-items-center justify-content-center">
+            <img class="banner-logo" src="./Assets/BAPE-Logo.png">
+        </div>
     </div>
 
     <div id="home">
@@ -30,6 +35,12 @@
     </div>
     <div id="preview-cart-container">
     </div>
+
+    <div class="d-flex justify-content-center py-5">
+        <h5>Made with 🖤 in academlo</h5>
+    </div>
+
+</div>
  
     <script src="./java/pageGenerator.js" type="module"></script>
     <script src="./java/shoppingCart.js" type="module"></script>

@@ -77,7 +77,7 @@ export let stock = [
             ]
         },
         {id: '9',
-        name: 'CHAMBRAY RELAXED FIT SHIRT',
+        name: 'RELAXED FIT SHIRT',
         price: 50,
         description: 'Embroidered Logo cropped T-shirt',
         colors:[
@@ -132,7 +132,7 @@ export let stock = [
             ]
         },
         {id: '15',
-        name: 'POCKET SHARK HOODIE JACKET',
+        name: 'POCKET HOODIE JACKET',
         price: 100,
         description: 'Printed Logo jacket',
         colors:[

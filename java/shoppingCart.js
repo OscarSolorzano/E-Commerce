@@ -28,8 +28,10 @@ let ShoppingCartItems = JSON.parse(localStorage.getItem('ShoppingCart')) || [];
 function generateCart(){
     let array= ShoppingCartItems;
     let counter = 0
-    let html =`<div class="shopping-cart px-5 d-flex">
-    <h5>Shopping Cart</h5>`
+    let html =`<div class="shopping-cart px-5 d-flex align-items-center shadow p-3 mb-5 bg-body">
+                <div class="py-5 d-flex flex-row justify-content-between col-12">  
+                  <h5>Shopping Cart</h5>  <button onclick="deleteCart()" class="btn btn-light px-0"><img src="./Assets/back.svg"></button> 
+                </div> `
     for (let i = 0; i < array.length; i++) {
         html += `<div class="my-4">
                 <div class="card d-flex flex-row">
@@ -40,17 +42,18 @@ function generateCart(){
                         <p>${array[i].name}</p>
                         <p class="text-end">$ ${array[i].price}</p>
                     </div>
+                    <button class="remove" onclick="removeCart(${array[i].id})">X</button>
                 </div>
             </div>`;
     }
     for (let i = 0; i < array.length; i++) {
         counter += array[i].price;
     }
-    html += ` <div> <h6>$ Subtotal &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    html += ` <div class="border-top py-3" col-12> <h6> Subtotal &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
-                        ${counter}</h6> 
+                        $ ${counter}</h6> 
                 </div>
-                <div> <button class="btn btn-outline-secondary" onClick="generateCardCart()">Go to Cart</button> </div>
+                <div> <button class="btn btn-outline-secondary btn-go-to" onClick="generateCardCart()">Go to Cart</button> </div>
             </div>`
     let container = document.getElementById('preview-cart-container')
     container.innerHTML = html;
@@ -66,12 +69,22 @@ function addItems(id){
     let product = find(stock,cbFindById);
     ShoppingCartItems.push(product)
     localStorage.setItem('ShoppingCart',JSON.stringify(ShoppingCartItems))
+    generateCart();
+
 }
 
+function deleteCart(){
+  let noCart = '';
+  const deleteCart = document.getElementById("preview-cart-container");
+  deleteCart.innerHTML = noCart;
+}
 
 //Genero la lista del carrito en base a un div con la clase container-cart
 function generateCardCart() {
-    let shoppingCart = ShoppingCartItems
+    let shoppingCart = ShoppingCartItems;
+    let noBanner = '';
+    const deleteBanner = document.getElementById("banner-container");
+    deleteBanner.innerHTML = noBanner;
     const container = document.getElementById("home");
     let html = '';
     for (let i = 0; i < shoppingCart.length; i++) {
@@ -85,6 +98,7 @@ function generateCardCart() {
     html += `<div id="total"></div>`
     container.innerHTML = html;
     totalPago();
+    deleteCart();
   }
   
   
@@ -97,7 +111,10 @@ function generateCardCart() {
   function totalPago(){
     pagoTotal
     let containerPago = document.getElementById("total");
-    let htmlPago = `<p>$${pagoTotal}</p><button onclick="fin()" class="finalizar">Finalizar Compra</button>`;
+    let htmlPago = `<div class="d-flex align-items-center flex-column"> 
+                          <h2>$${pagoTotal}</h2>
+                          <button onclick="fin()" class="finalizar btn btn-outline-dark">Finalizar Compra</button>
+                    </div>`;
     containerPago.innerHTML = htmlPago;
   }
 
@@ -136,12 +153,10 @@ function generateCardCart() {
 
 export {filter, find};
 
-
+window.deleteCart = deleteCart;
 window.generateCardCart = generateCardCart;
 window.totalPago = totalPago;
 window.fin = fin;
 window.removeCart = removeCart;
-
-
 window.addItems = addItems;
 window.generateCart = generateCart;
